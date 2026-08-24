@@ -1,0 +1,16 @@
+[Unit]
+Description=KohaGuard Library Exit Verification
+After=network.target mariadb.service
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/kohaguard
+EnvironmentFile=/opt/kohaguard/.env
+ExecStart=/opt/kohaguard/venv/bin/gunicorn --workers 2 --bind 0.0.0.0:8096 --timeout 30 backend.app:app
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
