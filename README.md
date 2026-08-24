@@ -1,6 +1,6 @@
 # KohaGuard — Koha-Integrated Library Exit Verification
 
-KohaGuard is an open-source, low-cost circulation-aware exit verification framework for libraries using **Koha ILS** and barcoded physical collections.
+KohaGuard is a **free and open-source, low-infrastructure circulation-aware exit verification framework** for libraries using **Koha ILS** and barcoded physical collections.
 
 It bridges **library circulation** and **physical collection security**: a guard or staff member scans a book barcode using a phone camera, USB scanner, or manual entry, and KohaGuard checks the live Koha circulation state to return an immediate decision.
 
@@ -8,6 +8,28 @@ It bridges **library circulation** and **physical collection security**: a guard
 - 🔴 **STOP / VERIFY** — item exists but is not currently checked out
 - 🟠 **STAFF REVIEW** — exceptional item state
 - ⚪ **UNKNOWN BARCODE** — barcode is not found in Koha
+
+## Free and open-source adoption
+
+KohaGuard is intended to be openly reproducible and reusable by institutions that already use **Koha** and barcode-based physical collections.
+
+The software itself is provided under the **MIT License**, so institutions can use, study, modify, adapt, and redistribute the code without paying a proprietary software license fee, subject to the terms of the license.
+
+KohaGuard is described as **low-infrastructure** because it is designed to reuse infrastructure that many Koha libraries already have, such as:
+
+- an existing Koha server;
+- existing item barcodes;
+- an existing local network;
+- an existing desktop, laptop, tablet, or smartphone; and
+- optionally, a USB barcode scanner.
+
+The framework does **not require mandatory RFID deployment** in order to perform circulation-aware exit verification. This can avoid the need to immediately retag an entire collection or purchase RFID gates, readers, and related middleware solely for this workflow.
+
+However, **free software does not mean zero operational cost**. An institution may still incur local costs for servers, networking, devices, maintenance, staff time, security hardening, backups, certificates, support, and deployment.
+
+A concise description for publications and institutional documentation is:
+
+> **KohaGuard is a free and open-source, low-infrastructure framework designed for institutions already using Koha and barcode-based physical collections. It reuses existing circulation data and barcode infrastructure without requiring proprietary licensing or mandatory RFID deployment.**
 
 ## Architecture
 
@@ -116,11 +138,17 @@ Suggested research framing:
 
 Recommended evaluation measures include classification accuracy, false-negative rate, false-positive rate, end-to-end verification time, backend response latency, camera-vs-manual performance, usability, and field deployment outcomes.
 
+For academic writing, the recommended contribution statement is:
+
+> **The framework is openly reproducible and can be adopted free of software licensing cost by Koha-based institutions, subject only to their local server, networking, device, maintenance, and deployment requirements.**
+
 See `research/EXPERIMENT-PROTOCOL.md`.
 
-## Important limitation
+## Relationship to RFID
 
-KohaGuard is **not a universal replacement for RFID**. RFID offers non-line-of-sight detection, multi-item reading and automated security gates. KohaGuard is intended as a low-cost complementary or transitional security layer for barcode-based Koha libraries.
+KohaGuard is **not a universal replacement for RFID**. RFID offers non-line-of-sight detection, multi-item reading, automated security gates, inventory functionality, and other capabilities that a barcode-based workflow does not provide.
+
+KohaGuard instead provides a **free, open-source and low-infrastructure complementary or transitional security layer** for barcode-based Koha libraries. Its purpose is to let institutions reuse their existing barcode and circulation infrastructure for point-of-exit verification without making RFID a mandatory prerequisite.
 
 ## License
 
