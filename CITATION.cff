@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use KohaGuard in research, please cite the software and any associated publication."
+title: "KohaGuard: Koha-Integrated Library Exit Verification Framework"
+type: software
+authors:
+  - family-names: "Mishra"
+    given-names: "Ashutosh"
+repository-code: "https://github.com/mashutosh934755/kohaguard-koha-exit-verification"
+license: MIT
+version: "0.1.0"
+date-released: "2026-08-24"
+keywords:
+  - Koha
+  - library security
+  - barcode verification
+  - circulation
+  - academic libraries
+  - physical collections
