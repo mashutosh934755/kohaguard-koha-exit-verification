@@ -1,0 +1,11 @@
+{
+  "name": "KohaGuard - Library Exit Verification",
+  "short_name": "KohaGuard",
+  "description": "Real-Time Library Exit Verification System",
+  "start_url": "/kohaguard/",
+  "scope": "/kohaguard/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f3f6fa",
+  "theme_color": "#132238"
+}
